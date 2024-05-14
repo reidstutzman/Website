@@ -58,10 +58,12 @@ function plusSlides(slideshowId, n) {
         showSlides('slideshow2', slideIndex2 += n);
     } else if (slideshowId === 'slideshow3') {
         showSlides('slideshow3', slideIndex3 += n);
-    }
+    } else if (slideshowId === 'slideshow4') {
+        showSlides('slideshow4', slideIndex4 += n);
 }
 
 // Initial display for each slideshow
 showSlides('slideshow1', slideIndex1);
 showSlides('slideshow2', slideIndex2);
 showSlides('slideshow3', slideIndex3);
+showSlides('slideshow4', slideIndex4);
