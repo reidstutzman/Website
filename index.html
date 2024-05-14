@@ -4,123 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engineering Project Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..."crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #222;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Navigation Styles */
-        nav {
-            background-color: #444;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #ccc;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 40px;
-            max-width: 800px;
-            margin: 0 auto;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #222;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Project Styles */
-        .project {
-            margin-bottom: 60px;
-        }
-
-        .project h3 {
-            margin-bottom: 10px;
-            color: #222;
-        }
-
-        .project p {
-            margin-bottom: 20px;
-        }
-
-        .project h4 {
-            margin-bottom: 10px;
-            color: #444;
-        }
-
-        .project ul {
-            margin-bottom: 20px;
-            list-style-type: none;
-            padding-left: 20px;
-        }
-
-        .project ul li {
-            position: relative;
-            margin-bottom: 10px;
-        }
-
-        .project ul li::before {
-            content: "\f058";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            position: absolute;
-            left: -20px;
-            color: #666;
-        }
-
-        .project img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -128,19 +15,30 @@
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#"><i class="fas fa-project-diagram"></i> Projects</a></li>
-            <li><a href="#"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+            <ul class="dropdown-menu">
+                <li><a href="#" onclick="scrollToProject('project1')">Project 1</a></li>
+                <li><a href="#" onclick="scrollToProject('project2')">Project 2</a></li>
+                <li><a href="#" onclick="scrollToProject('project3')">Project 3</a></li>
+                <!-- Add more projects here -->
+            </ul>
+        </li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+</nav>
 
-    <section>
+
+    <section id="home">
         <h2>Welcome to My Portfolio!</h2>
         <p>Here you can explore my latest engineering projects.</p>
+    </section>
 
-        <!-- Project: IoT Security Alarm System -->
+    <section id="projects">
+        <section id="projects">
+        <h2>Projects</h2>
         <div class="project">
             <h3>IoT Security Alarm System</h3>
             <p>
@@ -158,15 +56,25 @@
                 <li>Twilio integration for SMS notifications and BLE scanning for automatic arming/disarming.</li>
                 <li>Software written in Arduino IDE with modular code structure for easy maintenance.</li>
             </ul>
-            <div>
-                <h4>Project Images</h4>
-                <img src="image1.jpg" alt="Image 1">
-                <img src="image2.jpg" alt="Image 2">
-                <img src="image3.jpg" alt="Image 3">
+            <h4>Project Images</h4>
+               <div class="slideshow-container" id="slideshow1"> <!-- Add unique id -->
+              
+        <div class="slide">
+            <img src="IMAGE_URL_1" alt="Alarm 1">
+        </div>
+        <div class="slide">
+            <img src="IMAGE_URL_2" alt="Alarm 2">
+          </div>
+          <div class="slide">
+          <img src="IMAGE_URL_3" alt="Alarm Image 3">
+        </div>
+        <!-- Add more images here -->
+ <button class="prev" onclick="plusSlides('slideshow1', -1)">&#10094; <button class="next" onclick="plusSlides('slideshow1', 1)">&#10095;
+    </div>
+                
             </div>
         </div>
 
-        <!-- Project: Portable Water Heater -->
         <div class="project">
             <h3>Portable Water Heater</h3>
             <p>
@@ -183,15 +91,22 @@
                 <li>Quick heating of water within minutes, suitable for various outdoor applications.</li>
                 <li>Adjustable temperature settings and safety features for user convenience.</li>
             </ul>
-            <div>
-                <h4>Project Images</h4>
-                <img src="water_heater_image1.jpg" alt="Water Heater Image 1">
-                <img src="water_heater_image2.jpg" alt="Water Heater Image 2">
-                <img src="water_heater_image3.jpg" alt="Water Heater Image 3">
-            </div>
+             <h4>Project Images</h4>
+             <div class="slideshow-container" id="slideshow2">
+        <div class="slide">
+            <img src="IMAGE_URL_4" alt="WH 1">
         </div>
+        <div class="slide">
+            <img src="IMAGE_URL_5" alt="WH 2">
+          </div>
+          <div class="slide">
+          <img src="IMAGE_URL_6" alt="WH 3">
+        </div>
+        <button class="prev" onclick="plusSlides('slideshow2', -1)">&#10094;</button> <!-- Pass unique id to function -->
+        <button class="next" onclick="plusSlides('slideshow2', 1)">&#10095;</button> <!-- Pass unique id to function -->
+               </button>
+    </div>
 
-        <!-- Project: Laser Cut Wooden Box -->
         <div class="project">
             <h3>Laser Cut Wooden Box</h3>
             <p>
@@ -204,20 +119,41 @@
             </ul>
             <h4>Features and Finish</h4>
             <ul>
-<li>Finger Jointed, Interlocking panel design for easy assembly without the need for adhesives or fasteners.</li>
+                <li>Finger Jointed, Interlocking panel design for easy assembly without the need for adhesives or fasteners.</li>
                 <li>Smooth finish achieved through sanding.</li>
             </ul>
-            <div>
-                <h4>Project Images</h4>
-                <img src="wooden_box_image1.jpg" alt="Wooden Box Image 1">
-                <img src="wooden_box_image2.jpg" alt="Wooden Box Image 2">
-                <img src="wooden_box_image3.jpg" alt="Wooden Box Image 3">
-            </div>
+                          <h4>Project Images</h4>
+            <div class="slideshow-container" id="slideshow3">
+        <div class="slide">
+            <img src="IMAGE_URL_4" alt="WH 1">
         </div>
+        <div class="slide">
+            <img src="IMAGE_URL_5" alt="WH 2">
+          </div>
+          <div class="slide">
+          <img src="IMAGE_URL_6" alt="WH 3">
+        </div>
+      <button class="prev" onclick="plusSlides('slideshow3', -1)">&#10094;</button> <!-- Pass unique id to function -->
+        <button class="next" onclick="plusSlides('slideshow3', 1)">&#10095;</button> <!-- Pass unique id to function -->
+    </div>
+            </div>
+    </section>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>This is a placeholder for the About section.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>This is a placeholder for the Contact section.</p>
     </section>
 
     <footer>
         <p>&copy; 2024 Reid Stutzman</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
