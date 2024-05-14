@@ -147,3 +147,40 @@ footer {
 .next {
     right: 0;
 }
+
+/* Project Card Styles */
+.project {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+/* Project Header Styles */
+.project h3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Project Description Styles */
+.project p {
+  margin-bottom: 20px;
+}
+
+/* Project Image Styles */
+.project img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* Horizontal Line Separator */
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
+}
