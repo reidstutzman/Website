@@ -47,8 +47,9 @@
             <h4>Functionalities and Implementation</h4>
             <ul>
                 <li>Alarm system armed/disarmed via button or web interface, with door sensor integration.</li>
-                <li>Twilio integration for SMS notifications and BLE scanning for automatic arming/disarming.</li>
-                <li>Software written in Arduino IDE with modular code structure for easy maintenance.</li>
+                <li>Twilio integration for SMS notifications to mobile device when alarm triggered.</li>
+                <li>Bluetooth Low Energy (BLE) scanning for Tile's Mac Address for automatic arming/disarming based on proximity
+                <li>Software written in Arduino IDE with modular code structure for easy maintenance and future implementation.</li>
             </ul>
             <h4>Project Images</h4>
                <div class="slideshow-container" id="slideshow1"> <!-- Add unique id -->
@@ -74,49 +75,51 @@
            <!-- New section for the web page -->
             
             <h4>Web Interface</h4>
-    <p>In addition to the hardware components, a web interface was developed to monitor and control the alarm system remotely.</p>
+    <p>In addition to the hardware components, a web interface was developed to monitor and control the alarm system remotely, seen below.</p>
     <iframe src="alarm-system.html" width="100%" height="500"></iframe>      
             </div>
         </div>
 
         <div class="project">
-            <h3>Portable Water Heater</h3>
-            <p>
-                Developed a portable water heater for outdoor use using a compact heating element and battery-powered system.
-                Objectives included efficient heating and easy portability for camping and outdoor activities.
-            </p>
-            <h4>Design and Components</h4>
-            <ul>
-                <li>Compact heating element designed for rapid water heating.</li>
-                <li>Battery-powered system for portability, with a rechargeable lithium-ion battery.</li>
-            </ul>
-            <h4>Functionalities and Features</h4>
-            <ul>
-                <li>Quick heating of water within minutes, suitable for various outdoor applications.</li>
-                <li>Adjustable temperature settings and safety features for user convenience.</li>
-            </ul>
-             <h4>Project Images</h4>
-             <div class="slideshow-container" id="slideshow2">
+    <h3>Senior Capstone: Portable Water Heater</h3>
+    <p>
+        Developed a portable water heater for outdoor use using a compact heating element and battery-powered system.
+        Objectives included efficient heating and easy portability for camping and outdoor activities.
+    </p>
+    <h4>Design and Components</h4>
+    <ul>
+        <li>Compact 1500W heating element designed for rapid water heating.</li>
+        <li>Battery-powered system for portability, with a 48V rechargeable lithium-ion battery.</li>
+        <li>12V water pump for pumping of heated water.</li>
+        <li>Some other components: Arduino Uno, DC SSR, 48V->12V Converter, Water Temperature and Level Sensor
+    </ul>
+    <h4>Functionalities and Features</h4>
+    <ul>
+        <li>Heating 5 gallons of water from 55F to 98F in 26 minutes, suitable for various outdoor applications.</li>
+        <li>Adjustable temperature settings and safety features for user convenience.</li>
+        <li>Water pump achieves a flow of 1 gallon/min<li>
+    </ul>
+    <h4>Project Images</h4>
+    <div class="slideshow-container" id="slideshow2">
         <div class="slide">
             <img src="waterheatersolidworksassembly.png" alt="SOLIDWORKS Assembly">
         </div>
         <div class="slide">
             <img src="waterheatercircuit.png" alt="Circuit Diagram">
-          </div>
-          <div class="slide">
-          <img src="waterheatercircuitbox.png" alt="Heater Circuit Box">
         </div>
-            <div class="slide">
-          <img src="waterheaterassembly.png" alt="Prototype Assembly">
+        <div class="slide">
+            <img src="waterheatercircuitbox.png" alt="Heater Circuit Box">
         </div>
-                 </div>
-            <div class="slide">
-          <img src="waterheaterpump.png" alt="Heater Circuit Box">
+        <div class="slide">
+            <img src="waterheaterassembly.png" alt="Prototype Assembly">
         </div>
-        <button class="prev" onclick="plusSlides('slideshow2', -1)">&#10094;</button> <!-- Pass unique id to function -->
-        <button class="next" onclick="plusSlides('slideshow2', 1)">&#10095;</button> <!-- Pass unique id to function -->
-               </button>
+        <div class="slide">
+            <img src="waterheaterpump.png" alt="Heater Circuit Box">
+        </div>
+        <button class="prev" onclick="plusSlides('slideshow2', -1)">&#10094;</button>
+        <button class="next" onclick="plusSlides('slideshow2', 1)">&#10095;</button>
     </div>
+</div>
 
         <div class="project">
             <h3>Laser Cut Wooden Box</h3>
@@ -125,7 +128,7 @@
             </p>
             <h4>Design and Fabrication</h4>
             <ul>
-                <li>Custom-designed wooden box using SOLIDWORKS software for precise measurements.</li>
+                <li>Custom-designed wooden box using SOLIDWORKS for precise measurements.</li>
                 <li>Laser cutting technology employed using an Epilog Fusion Pro Laser Cutter for accurate cutting of wooden box sides.</li>
             </ul>
             <h4>Features and Finish</h4>
