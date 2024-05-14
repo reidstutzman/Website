@@ -22,6 +22,7 @@ function smoothScroll(event) {
 let slideIndex1 = 0; // Initial slide index for slideshow 1
 let slideIndex2 = 0; // Initial slide index for slideshow 2
 let slideIndex3 = 0; // Initial slide index for slideshow 3
+let slideIndex4 = 0; // Initial slide index for slideshow 4
 
 function showSlides(slideshowId, n) {
     const slides = document.querySelectorAll('#' + slideshowId + ' .slide'); // Select slides based on slideshowId
@@ -44,6 +45,9 @@ function showSlides(slideshowId, n) {
         slideIndex2 = n;
     } else if (slideshowId === 'slideshow3') {
         slideIndex3 = n;
+    }
+    else if (slideshowId === 'slideshow4') {
+        slideIndex4 = n;
     }
 }
 
