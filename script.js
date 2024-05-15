@@ -60,6 +60,7 @@ function plusSlides(slideshowId, n) {
         showSlides('slideshow3', slideIndex3 += n);
     } else if (slideshowId === 'slideshow4') {
         showSlides('slideshow4', slideIndex4 += n);
+    }
 }
 
 // Initial display for each slideshow
